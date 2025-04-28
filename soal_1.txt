@@ -1,0 +1,100 @@
+Nama 	: Kailla Salsabila
+NIM		: 2306064
+Kelas	: B
+
+Kasus:
+Seorang petani ingin sistem AI yang bisa membantu menentukan jenis hama tanaman berdasarkan gejala seperti:
+	•	Daun menguning
+	•	Terdapat bercak hitam
+	•	Daun berlubang
+	•	Tanaman layu
+
+Tugas:
+Pertanyaan :
+1. Buat sistem pakar berbasis aturan logika (gunakan minimal 4 aturan).
+	•	Jika daun menguning dan ada bercak hitam → maka hama: jamur hitam
+	•	Jika daun berlubang dan daun menguning → maka hama: ulat daun
+	•	Jika tanaman layu dan daun menguning → maka hama: busuk akar
+	•	Jika daun menguning saja → maka hama: kutu daun
+	•	Jika daun menguning dan tanaman layu dan bercak hitam → maka hama: daun busuk berat
+
+2. Gunakan logika proposisional, pseudocode dan pakai Prolog atau python.
+a.	Proposional
+	Simbol:
+	•	DM = daun_menguning
+	•	BH = bercak_hitam
+	•	DB = daun_berlubang
+	•	TL = tanaman_layu
+	
+	Rules:
+	R1 : (DM Λ BH) → jamur_hitam
+	R2 : (DM Λ DB) → ulat_daun
+	R3 : (DM Λ TL) → busuk_akar
+	R4 : (DM) → kutu_daun
+	R5 :  (DM Λ TL Λ BH) → daun_busuk_berat
+
+b.	Pseudocode
+	Input: Gejala dari tanaman
+	Output: Jenis Hama
+
+	Mulai
+	      Baca input gejala (DM, BH, DB, TL)
+      
+	      Jika (DM dan BH) maka
+		      Hama = Jamur Hitam
+	      Else jika (DM dan DB) maka
+		      Hama = Ulat Daun
+	      Else jika (DM dan TL) maka
+		      Hama = Busuk Akar
+	      Else jika (DM) maka
+		      Hama = Kutu Daun
+	      Else jika (DM dan TL dan BH) maka
+		      Hama = Daun Busuk Berat
+	      Else
+		      Hama tidak teridentifikasi
+	
+	      Tampilkan hasil Hama
+	Selesai
+
+c.	(terlampir)
+
+3. Tambahkan penjelasan alur inferensi dari input output.
+Proses inferensi pada sistem pakar ini dimulai dari menerima input gejala dari pengguna hingga menghasilkan output berupa jenis hama yang teridentifikasi. Adapun tahapan inferensinya sebagai berikut:
+
+a.	Tahap Input Gejala
+	Pengguna (petani) memasukkan gejala yang teramati pada tanaman.
+	Gejala yang dapat diinput antara lain:
+	•	DM (Daun Menguning)
+	•	BH (Bercak Hitam)
+	•	DB (Daun Berlubang)
+	•	TL (Tanaman Layu)
+	Input dapat berupa satu atau lebih gejala sekaligus.
+
+b.	Tahap Proses Inferensi
+	Setelah menerima input gejala, sistem melakukan proses inferensi dengan langkah berikut:
+	1)	Pemeriksaan kombinasi gejala DM dan BH
+		•	Jika kedua gejala ini muncul, maka sistem menyimpulkan hama sebagai jamur_hitam (menggunakan aturan R1).
+		•	Jika tidak, sistem melanjutkan ke langkah 3.
+	2)	Pemeriksaan kombinasi gejala DM dan DB
+		•	Jika kedua gejala ini muncul, maka sistem menyimpulkan hama sebagai ulat_daun (menggunakan aturan R2).
+		•	Jika tidak, sistem melanjutkan ke langkah 4.
+	3)	Pemeriksaan kombinasi gejala DM dan TL
+		•	Jika kedua gejala ini muncul, maka sistem menyimpulkan hama sebagai busuk_akar (menggunakan aturan R3).
+		•	Jika tidak, sistem melanjutkan ke langkah 5.
+	4)	Pemeriksaan keberadaan gejala DM saja
+		•	Jika hanya gejala DM yang muncul tanpa kombinasi lain, maka sistem menyimpulkan hama sebagai kutu_daun 		(menggunakan aturan R4).
+		•	Jika tidak ada kecocokan sama sekali, maka sistem menyimpulkan bahwa jenis hama tidak diketahui.
+	5)	Pemeriksaan kombinasi gejala DM, TL, dan BH
+		•	Jika ketiga gejala tersebut muncul bersamaan, maka sistem menyimpulkan hama sebagai daun_busuk_berat 		(menggunakan aturan R5).
+		•	Jika tidak, sistem melanjutkan ke langkah 2.
+
+c.	Tahap Output Diagnosa
+	Berdasarkan hasil pemeriksaan dan penerapan aturan, sistem akan menghasilkan satu output berupa jenis hama tanaman yang terdeteksi, atau memberikan informasi bahwa hama tidak dapat diidentifikasi.
+
+Output yang mungkin antara lain:
+	•	jamur_hitam
+	•	ulat_daun
+	•	busuk_akar
+	•	kutu_daun
+	•	daun_busuk_berat
+	•	tidak diketahui
