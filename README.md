@@ -77,6 +77,34 @@ ELSE
 
 ---
 
+---
+
+# 📝 Langkah Pengerjaan
+
+## 📌 A. Pengerjaan Sistem Pakar Diagnosa Hama Tanaman
+
+1. **Menganalisis Permasalahan**
+   - Menentukan gejala utama tanaman: daun menguning, bercak hitam, daun berlubang, tanaman layu.
+   - Menentukan daftar kemungkinan hama/penyakit berdasarkan kombinasi gejala.
+
+2. **Menyusun Basis Aturan (Rule Base)**
+   - Membuat tabel hubungan antara kombinasi gejala dan diagnosis.
+
+3. **Membuat Pseudocode**
+   - Menuliskan logika inferensi berbentuk IF-ELSE dari basis aturan.
+
+4. **Mengimplementasikan Sistem Pakar**
+   - Membuat program menggunakan bahasa Python.
+   - Menggunakan library `experta` untuk mendefinisikan fakta, aturan, dan mesin inferensi.
+
+5. **Pengujian Program**
+   - Memberikan berbagai kombinasi input gejala untuk memastikan diagnosis yang dihasilkan sudah sesuai dengan aturan.
+
+6. **Menyusun Dokumentasi**
+   - Menulis README berisi deskripsi sistem, aturan, cara kerja, dan langkah menjalankan program.
+
+---
+
 # 📄 Review Jurnal AI - Soal Nomor 1
 
 ## 📰 Informasi Jurnal
@@ -162,8 +190,4 @@ Penelitian ini bertujuan untuk mengoptimalkan hasil pertanian dan konservasi sum
 
 ---
 
-Selesai! 🎯  
-README ini **lengkap, sistematis, dan siap** untuk langsung diunggah ke GitHub atau dilampirkan dalam laporan tugas.
 
-Kalau kamu mau, saya juga bisa bantu sekalian buatkan contoh isi file `sistem_pakar.py` supaya lebih komplet lagi.  
-Mau sekalian? 🚀
